@@ -1,0 +1,835 @@
+1-hellow world
+
+----------------------
+2-variable
+
+  int myIntVar=1000000;
+       long myLongValue=2000003266;
+       double mDoubleValue=2.3225;
+       float myFloatValue=6.1f;
+       char myCharValue='a';
+       String myStringValue="I Love Kurdestan";
+	   boolean result=true;
+
+
+       var x=10;
+       var myString="12Abc";
+
+
+        System.out.println(myIntVar);
+        System.out.println(x);
+        System.out.println(myLongValue);
+        System.out.println(myCharValue);
+        System.out.println(myStringValue);
+        System.out.println("---------------------");
+        int x1=25;
+        System.out.println(x1);
+        x1=63;
+        System.out.println(x1);
+		
+--------------------------------------
+	3-operator
+	
+	
+   int x=50;
+       int y=10;
+
+      int sum= x+y;
+      int mul=x*y;
+      int min=x-y;
+      int div=x/y;
+
+        System.out.println("sum="+sum);
+        System.out.println("m="+mul);
+        System.out.println("div="+div);
+        System.out.println("min="+min);
+        System.out.println("--------Assignment value--------");
+
+        System.out.println( x+=20);
+        System.out.println( x-=5);
+        System.out.println(" -------------Compare operator------------");
+
+        boolean result= y==25;
+        System.out.println("reult is:"+result);
+
+        boolean result2= y==10;
+        System.out.println("reult is:"+result2);
+
+        System.out.println(x>200);
+        System.out.println(x>=200);
+
+        System.out.println("------Logical operator-----");
+
+        boolean s1=(x>10 && y>20);
+        System.out.println("and="+s1);
+
+        System.out.println(x>10 || y>20);
+        boolean s2=!(x>10 && y>20);
+        System.out.println("!="+s2);
+
+        String s5="Hi";
+        String s6="Kurdestan";
+        System.out.println(s5+s6);
+        System.out.println(s5+x);
+        System.out.println(s5+x+y);
+
+---------------------------------------------
+		4-control statment
+		
+		
+        // get input
+        Scanner sc=new Scanner(System.in);
+        int month=sc.nextInt();
+//if
+        if (month==1 || month==2|| month==3){
+
+            System.out.println("bahar");
+        }
+
+        else if (month==4|| month==5|| month==6){
+            System.out.println("Tawsan");
+        }
+        else if (month==7|| month==8|| month==9){
+            System.out.println("Paeez");
+        }
+
+        else if (month==10|| month==11|| month==12){
+            System.out.println("Zestan");
+        }
+        else {
+            System.out.println("incorrect number");
+        }
+
+
+     //switch
+
+        String season=switch (month){
+            case 1,2,3:
+                yield "Bahar";
+            case 4,5,6:
+                yield "Tawsan";
+
+            case 7,8,9:
+                yield "Paeez";
+
+
+            case 10,11,12:
+                yield "Zestan";
+
+            default:
+                yield "incorrect number";
+
+        };
+
+
+
+        String se="";
+
+        switch (month){
+            case 1,2,3:
+                se="bahar";
+                break;
+            case 4,5,6:
+                se="Hawin";
+                break;
+
+              case 7,8,9:
+                se="Paeez";
+                break;
+
+
+              case 10,11,12:
+                se="Zestan";
+                break;
+            default:
+                se="incorrect number";
+
+        }
+
+        System.out.println("switch before java 13:"+se);
+
+
+
+        System.out.println("Season switch:"+season);
+
+//if
+        int number=sc.nextInt();
+
+        if(number%2==0){
+            System.out.println("zoj");
+        }
+        else {
+            System.out.println("fard");
+        }
+
+    }
+}
+
+------------
+5-loop
+
+ for(int i=0; i<1000;i++) {
+            System.out.println("index "+i +"=Kurdestan");
+        }
+
+
+        int j=0;
+        while (j<10){
+
+            System.out.println(j+"Kurdestan");
+           j++;
+        }
+
+    }
+	
+	---------------------------
+	6-function (method)
+	
+	public class Calculator {
+
+    public int sum(int x,int y){
+       int reult=x+y;
+
+       return reult;
+
+    }
+
+
+    public int minus(int x,int y){
+       return x-y;
+
+    }
+
+    public void print(int num){
+        System.out.println(num);
+    }
+
+    public void print(double num){
+        System.out.println(num);
+    }
+
+    public double pow(int x,int y){
+        return Math.pow(x, y);
+
+    }
+
+    public int getValue(){
+        Scanner scanner=new Scanner(System.in);
+
+        return scanner.nextInt();
+
+    }
+
+
+ Calculator cl=new Calculator()  ;
+        System.out.println("enter 1 number: ");
+
+    int number1=  cl.getValue();
+        System.out.println("enter 2 number: ");
+    int number2=  cl.getValue();
+
+        System.out.println("sum="+cl.sum(number1,number2));
+        System.out.println("min="+cl.minus(number1,number2));
+
+
+        double pw=cl.pow(number1,number2);
+
+
+        cl.print(pw);
+
+
+} 
+--------------------------
+
+7-oop encapsulation
+
+
+public class Car {
+    private String model;
+    private String brand;
+    private int age;
+
+    public Car(String model, String brand, int age) {
+        this.model = model;
+        this.brand = brand;
+        this.age = age;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public void printDetail(){
+        System.out.println(age+"-"+model+"-"+brand);
+    }
+
+
+  Car car=new Car("k30","audi",5) ;
+       car.printDetail();
+------------
+
+8-oop inheritance
+
+public  class Vehicle {
+
+    private String model;
+    private String make;
+    private int age;
+
+    public Vehicle(String model, String make, int age) {
+        System.out.println("Vehicle constructor is call");
+        this.model = model;
+        this.make = make;
+        this.age = age;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public void describe(){
+        System.out.println(age+"-"+make+"-"+model);
+    }
+
+     public final void describe2(){
+        System.out.println(age+"-"+make+"-"+model);
+    }
+}
+
+public class Car extends Vehicle{
+
+    private int wheel;
+
+    public Car(String model, String make, int age, int wheel) {
+        super(model, make, age);
+
+        this.wheel = wheel;
+    }
+
+    public int getWheel() {
+        return wheel;
+    }
+
+    public void setWheel(int wheel) {
+        this.wheel = wheel;
+    }
+
+    @Override
+    public void describe() {
+        System.out.println("This is a car");
+        super.describe();
+    }
+
+}
+
+ public static void main(String[] args) {
+        Car car=new Car("Ferari","Xband",6,4);
+
+        System.out.println("model:"+car.getModel());
+        System.out.println("make:"+car.getMake());
+        System.out.println("wheel:"+car.getWheel());
+
+        car.describe();
+    }
+	
+--------------------------------------------------
+9-oop abstraction (interface)	
+
+
+public interface Movable
+{
+
+
+    void moveUp();
+    void moveDown();
+    void moveLeft();
+    void moveRight();
+
+}
+package inf;
+
+public class MoveablePoint  implements  Movable,Hi{
+    private int x,y;
+
+    public MoveablePoint(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    public void moveUp() {
+        y++;
+    }
+
+    @Override
+    public void moveDown() {
+      y--;
+    }
+
+    @Override
+    public void moveLeft() {
+       x--;
+    }
+
+    @Override
+    public void moveRight() {
+       x++;
+    }
+
+    @Override
+    public String toString() {
+        return "MoveablePoint{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
+
+    @Override
+    public void print() {
+
+    }
+}
+
+  public static void main(String[] args) {
+        MoveablePoint p1=new MoveablePoint(1,2);
+        System.out.println(p1);
+        p1.moveDown();
+        System.out.println(p1);
+        p1.moveUp();
+        System.out.println(p1);
+
+
+
+    }
+	
+	-------------
+	
+10-oop polymorphisim
+
+        Movable m1=new MoveablePoint(6,7);
+        m1.moveDown();
+        System.out.println(m1);	
+		
+		
+-----------------
+11-final
+
+
+---------
+12-record
+public record BancAccount(long accountNumber,String name,double balance) {
+}
+
+  public static void main(String[] args) {
+        BancAccount bancAccount=new BancAccount(1,"zhowan",3232.25);
+
+        System.out.println(bancAccount.accountNumber());
+        System.out.println(bancAccount.balance());
+        System.out.println(bancAccount.name());
+    }
+------------------
+13-wrapper class
+public class Wtapper {
+    public static void main(String[] args) {
+        int x=0;
+        double x1=0;
+        float x2=0;
+        char x3='0';
+        long l=0;
+String y=null;
+        System.out.println(x);
+        System.out.println(y);
+
+        Integer t=null;
+        Integer n=6;
+        System.out.println(n);
+        Double b=null;
+        Float b2=null;
+        Long b3=null;
+
+        String number="66.23";
+
+     double i=   Double.parseDouble(number);
+        System.out.println(i);
+
+
+
+
+
+    }
+}
+---------------------------
+
+14-generics 
+
+	public class Gen<T> {
+    T ob;
+
+    public Gen(T ob) {
+        this.ob = ob;
+    }
+
+    public T getOb() {
+        return ob;
+    }
+
+    public void showType(){
+        System.out.println("Type of T is:"+ob.getClass().getName());
+    }
+	
+	 public static void main(String[] args) {
+        Gen<Integer> iOb=new Gen<Integer>(88);
+        iOb.showType();
+        System.out.println("value="+iOb.getOb());
+
+        System.out.println("-------------------");
+
+        Gen<String> strOb=new Gen<>("Generic test");
+        strOb.showType();
+        System.out.println("value:"+strOb.getOb());
+
+    }
+	
+}
+--------
+15- collection(arraylist-set)
+    public static void main(String[] args) {
+        List<String> al=new ArrayList<>();
+        System.out.println("initial size:"+al.size());
+
+        //add item
+
+        al.add("C");
+        al.add("A");
+        al.add("E");
+        al.add("B");
+        al.add("D");
+        al.add("F");
+        al.add(1,"A2");
+
+        System.out.println("size after additions="+al.size());
+        System.out.println("contents:"+al);
+
+        //iterate
+        Iterator itr=al.iterator();
+
+        while (itr.hasNext()){
+            String element= (String) itr.next();
+            System.out.println(element);
+        }
+        System.out.println("-----------");
+
+        for(String v:al){
+            System.out.println(v);
+        }
+        System.out.println("-------");
+
+
+
+        String selectedItem=al.get(0);
+        System.out.println("item 0="+selectedItem);
+
+  al.remove("F");
+  al.remove(2);
+        System.out.println("size:"+al.size());
+        System.out.println("content:"+al);
+		
+		
+		
+		
+		set
+		
+		 Set<Address> ml=new HashSet<>();
+        Address ad1=new Address("j.w.west","11 oak ave","urbana","IL",1005);
+
+        ml.add(ad1);
+
+        boolean isAdded=ml.add(ad1);
+
+        System.out.println("is added:"+isAdded);
+
+        ml.add(new Address("Ralph baker","1142 Maple lane","Mahomet","IL",1002));
+        ml.add(new Address("Tom Carltont","876 Elm st","Champign","IL",1001));
+
+
+        for(Address address:ml){
+            System.out.println(address);
+        }
+
+
+
+
+    }
+	
+	------------------------------
+	16- optional
+	
+	public static void main(String[] args) {
+        Optional<String> noVal=Optional.empty();
+        Optional<String> hasValue=Optional.of("ABCDEFGH");
+
+        if (noVal.isPresent())
+            System.out.println("Dont display");
+
+
+         if (hasValue.isPresent()){
+            System.out.println(" display"+ hasValue.get());
+
+         }
+
+         String defValue=noVal.orElse("Default value");
+        System.out.println(defValue);
+
+
+
+    }
+-------------------------
+
+17-stream
+
+   List<Integer> myList=new ArrayList<>();
+        myList.add(7);
+        myList.add(18);
+        myList.add(10);
+        myList.add(24);
+        myList.add(17);
+        myList.add(5);
+        Stream<Integer> integerStream=myList.stream();
+        Optional<Integer> optionalInteger=integerStream.min(Integer::compareTo);
+        if (optionalInteger.isPresent()){
+            System.out.println(optionalInteger.get());
+        }
+
+        Optional<Integer> optionalInteger2=myList.stream().max(Integer::compareTo);
+        if (optionalInteger2.isPresent()){
+            System.out.println(optionalInteger2.get());
+        }
+
+
+
+        //filter
+        System.out.println("-----------");
+        var oddValue=myList.stream().sorted().filter((n)->(n%2)==1);
+        oddValue.forEach(integer -> System.out.println(integer));
+
+        System.out.println("-----------");
+
+         oddValue=myList.stream().sorted().filter((n)->(n%2)==1)
+
+                 .filter((n)->n>5);
+        oddValue.forEach(integer -> System.out.println(integer));
+
+        System.out.println("-----------");
+
+        Optional<Integer> optionalValue=myList.stream().reduce((a,b)->a*b);
+        int val=myList.stream().reduce(1,(a,b)->a*b);
+        if (optionalValue.isPresent()){
+            System.out.println(optionalValue.get());
+        }
+        System.out.println(val);
+		
+		
+		
+		----------------------
+		18-Exceptions 
+		
+		
+      try {
+          int a=20;
+          int x=0;
+
+          int result=a/x;
+      }
+      catch (ArithmeticException e){
+
+          System.out.println("divide by zero is imposible");
+      }
+
+
+      try {
+          int a2[]=new int[5];
+
+          a2[10]=50;
+      }
+      catch (ArrayIndexOutOfBoundsException e){
+          System.out.println("out of bound ");
+      }
+
+
+
+
+        System.out.println("end of app");
+
+    }
+	
+	---------------
+	
+	19-thread
+	
+	public class ThreadOne extends Thread{
+    public ThreadOne() {
+        super("ThreadOne");
+        System.out.println("Thread one:"+this);
+    }
+
+    @Override
+    public void run() {
+      try {
+          for (int i=5;i>0;i--){
+              System.out.println("Thread One:"+i);
+              Thread.sleep(500);
+
+          }
+      } catch (InterruptedException e){
+          System.out.println("Thread one interrupt");
+      }
+        System.out.println("Existing  Thread One");
+
+    }
+}
+
+public class ThreadTwo implements Runnable{
+
+    @Override
+    public void run() {
+        try {
+            for (int i=5;i>0;i--){
+                System.out.println("Thread two:"+i);
+
+                Thread.sleep(300);
+
+            }
+        } catch (InterruptedException e){
+            System.out.println("Thread two interrupt");
+        }
+        System.out.println("Existing  Thread two");
+
+
+    }
+}
+
+
+
+ public static void main(String[] args) {
+        ThreadOne tr1=new ThreadOne();
+
+        ThreadTwo t2=new ThreadTwo();
+        Thread tr2=new Thread(t2,"Thread Two");
+
+        tr1.start();
+        tr2.start();
+
+        try {
+            for (int i=5;i>0;i--){
+                System.out.println("Thread main:"+i);
+
+                Thread.sleep(1000);
+
+            }
+        } catch (InterruptedException e){
+            System.out.println("Thread one interrupt");
+        }
+
+        System.out.println("Main thread exist");
+
+
+
+    }
+	
+	-----
+
+--------------
+20-maven
+
+ <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+        </dependency>
+		
+		
+		@Data
+public class Student {
+
+    private String name;
+    private String family;
+    private int age;
+
+}
+  Student student=new Student();
+
+        student.setAge(200);
+        student.setFamily("family");
+        student.setName("name");
+        System.out.println(student);
+		
+		
+		
+		//faker
+		
+		  Faker faker = new Faker(new Locale("fa"));
+
+
+    String name = faker.name().fullName(); // Miss Samanta Schmidt
+        System.out.println("name:"+name);
+    String firstName = faker.name().firstName(); // Emory
+        System.out.println("firstName:"+firstName);
+    String lastName = faker.name().lastName(); // Barton
+        System.out.println("lastName:"+lastName);
+
+    String streetAddress = faker.address().streetAddress(); // 60018 Sawayn Brooks Suite 449
+        System.out.println("streetAddress:"+streetAddress);
+		
+		-----------------------
+		
+		
+
+
+
+
+
+
+		
